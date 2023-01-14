@@ -1,38 +1,55 @@
-.App {
-  text-align: center;
+*{
+    margin: 0;
+    padding: 0;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.layaout{
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: auto;
+        /* grid-template-rows: 2fr 2fr 2fr 2fr 6fr 2fr ; */
+        grid-template-areas:    "navbar navbar navbar"
+                                "aside mission1A card"
+                                "aside mission1B genlist"
+                                "footer footer footer"
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar{
+    height: 160px;
+    width: auto;
+    grid-area: navbar;
+    background-color: aqua;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.aside{
+    height: 400px;
+    width: auto;
+    grid-area: aside;
+    background-color: blue;
 }
-
-.App-link {
-  color: #61dafb;
+.mission1a{ 
+    
+    grid-area: mission1A;
+    background-color: blueviolet;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.mission1b{
+    
+    grid-area: mission1B;
+    background-color: yellow;
+}
+.card{
+    height: auto;
+    width: auto    ;
+    grid-area: card;
+    background-color: green
+    ;
+}
+.genlist{
+    height: auto;
+    width: auto;
+    grid-area: genlist;
+    background-color: lightcoral;
+}
+.footer{
+    height: 96px;
+    grid-area: footer;
+    background-color: chartreuse;
 }
